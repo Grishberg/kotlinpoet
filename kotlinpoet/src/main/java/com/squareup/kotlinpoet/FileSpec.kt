@@ -376,7 +376,9 @@ public class FileSpec private constructor(
 
     @JvmStatic public fun builder(packageName: String, fileName: String): Builder =
         Builder(packageName, fileName)
+    @JvmStatic public fun setIndent(indent: String) {
+      DEFAULT_INDENT = indent
+    }
   }
 }
-
-internal const val DEFAULT_INDENT = "  "
+internal var DEFAULT_INDENT = "  "
